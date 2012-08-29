@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='App'>
+
+    <!-- Inherit the core Web Toolkit stuff. -->
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="org.fusesource.restygwt.RestyGWT"/>
+
+    <!-- Specify the app entry point class. -->
+    <entry-point class='net.javaforge.gwt.rest.client.App'/>
+
+    <!-- Specify the paths for translatable code -->
+    <source path='client'/>
+    <source path='shared'/>
+
+</module>
