@@ -1,0 +1,9 @@
+*, body {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.tableHeader {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+}
