@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.javaforge.blog</groupId>
+	<artifactId>docbkx</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>javaforge docbkx</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<debug>true</debug>
+					<encoding>UTF-8</encoding>
+					<optimize>true</optimize>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>docbkx</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.agilejava.docbkx</groupId>
+						<artifactId>docbkx-maven-plugin</artifactId>
+						<version>2.0.14</version>
+						<executions>
+							<execution>
+								<id>doc</id>
+								<goals>
+									<goal>generate-pdf</goal>
+								</goals>
+								<phase>package</phase>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>net.sf.xslthl</groupId>
+								<artifactId>xslthl</artifactId>
+								<version>2.0.2</version>
+								<scope>runtime</scope>
+							</dependency>
+							<dependency>
+								<groupId>net.sf.offo</groupId>
+								<artifactId>fop-hyph</artifactId>
+								<version>1.2</version>
+								<scope>runtime</scope>
+							</dependency>
+						</dependencies>
+						<configuration>
+							<sourceDirectory>docs</sourceDirectory>
+							<targetDirectory>target/docs</targetDirectory>
+							<xincludeSupported>true</xincludeSupported>
+							<useExtensions>1</useExtensions>
+							<highlightSource>1</highlightSource>
+							<highlightDefaultLanguage>java</highlightDefaultLanguage>
+							<calloutsExtension>1</calloutsExtension>
+							<paperType>A4</paperType>
+							<fop1Extensions>1</fop1Extensions>
+							<foCustomization>${basedir}/conf/customization-fopdf.xsl</foCustomization>
+							<includes>manual.xml</includes>
+							<postProcess>
+								<zip
+									destfile="${project.build.directory}/${project.artifactId}-${project.version}-docs.zip">
+									<fileset dir="${project.build.directory}/docs"
+										includes="**/*.pdf" />
+								</zip>
+							</postProcess>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<version>1.7</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>attach-artifact</goal>
+								</goals>
+								<phase>package</phase>
+								<configuration>
+									<artifacts>
+										<artifact>
+											<file>${project.build.directory}/${project.artifactId}-${project.version}-docs.zip</file>
+											<type>zip</type>
+											<classifier>docs</classifier>
+										</artifact>
+									</artifacts>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
+</project>

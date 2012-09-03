@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book[
+<!ENTITY root "http://www.company.com/<?eval ${project.groupId}?>/<?eval ${project.artifactId}?>/<?eval ${project.version}?>"> 
+]>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:db="http://docbook.org/ns/docbook">
+
+	<bookinfo>
+		<releaseinfo role="cvs">$$Id$$</releaseinfo>
+		<releaseinfo role="location">&root;
+		</releaseinfo>
+		<title>
+			Documentation for <?eval ${project.name}?>
+		</title>
+		<authorgroup>
+			<author>
+				<firstname>John</firstname>
+				<surname>Doe</surname>
+			</author>
+			<author>
+				<firstname>Adam</firstname>
+				<surname>Surname</surname>
+				<affiliation>
+					<orgname>Company, Inc.</orgname>
+				</affiliation>
+			</author>
+			<author>
+				<firstname>Eve</firstname>
+				<surname>Surname</surname>
+				<affiliation>
+					<orgname>Company, Inc.</orgname>
+				</affiliation>
+			</author>
+		</authorgroup>
+		<pubdate>2012-01-01</pubdate>
+		<copyright>
+			<year><?eval ${project.inceptionYear}?>
+			</year>
+			<holder>Company Inc. [COMPANY, INC.]. All Rights Reserved.</holder>
+		</copyright>
+		<abstract>
+			<para>
+				This is a documentation example generated with Docbook for project <?eval ${project.name}?>
+				(v.<?eval ${project.version}?>
+				).
+			</para>
+		</abstract>
+		<legalnotice role="status">
+			<para>
+				Please send comments on this specification to the
+				<email>docbook-publishers@company.com</email>
+				list.
+			</para>
+		</legalnotice>
+		<legalnotice role="notices">
+			<para>
+				Copyright © COMPANY® <?eval ${project.inceptionYear}?>
+				. All Rights Reserved.
+			</para>
+			<para>This document and the information contained herein is provided
+				on an "AS IS" basis
+				and Company Inc.
+				DISCLAIMS ALL WARRANTIES, EXPRESS
+				OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+				ANY WARRANTY THAT THE
+				USE OF
+				THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP
+				RIGHTS OR ANY
+				IMPLIED WARRANTIES OF
+				MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+				PURPOSE.
+			</para>
+		</legalnotice>
+
+		<legalnotice>
+			<para>Permission to use, copy, modify and distribute
+				the DocBook DTD
+				and its accompanying documentation for any purpose and
+				without fee is
+				hereby granted in perpetuity, provided that the above
+				copyright
+				notice and this paragraph appear in all copies.
+			</para>
+		</legalnotice>
+
+		<legalnotice>
+			<para>
+				The copyright holders make no representation about the suitability
+				of
+				this DTD for any purpose. It is provided
+				<quote>as is</quote>
+				without expressed
+				or implied warranty. If you modify the DocBook DTD
+				in any way, except
+				for
+				declaring and referencing additional general
+				entities and declaring
+				additional
+				notations, identify your DTD as a
+				variant of DocBook.
+			</para>
+		</legalnotice>
+
+	</bookinfo>
+
+	<preface>
+		<title>Preface</title>
+		<para>If you have a preface, put it here.</para>
+	</preface>
+
+	<toc />
+
+	<chapter>
+		<title>This is a chapter</title>
+
+		<section>
+			<title>This is a section</title>
+			<para>This is a paragraph.</para>
+		</section>
+
+		<xi:include href="section0.inc.xml" />
+		<xi:include href="section1.inc.xml" />
+		<xi:include href="section2.inc.xml" />
+		<xi:include href="section3.inc.xml" />
+		<xi:include href="section4.inc.xml" />
+
+	</chapter>
+
+	<appendix xml:id="changes">
+		<title>Revision History</title>
+		<para>Initial Draft. 11 June 2011.</para>
+		<para>Revised Draft. 6 October 2011. Usage examples, additional
+			clarifications added.
+		</para>
+	</appendix>
+
+	<xi:include href="bibliography.inc.xml" />
+
+</book>

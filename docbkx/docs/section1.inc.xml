@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:ns5="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+	xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook"
+	xml:id="s.dummy">
+
+	<title>The Dummy Chapter</title>
+	<para>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et
+		magna
+		tellus. In hac
+		habitasse platea dictumst. Nam aliquam ligula ut
+		ipsum vehicula et dictum massa
+		iaculis. Duis vel
+		lacus nibh, vitae
+		fermentum neque. Mauris consequat sem pulvinar augue
+		feugiat accumsan.
+		Ut in
+		mauris risus. Etiam sed nulla justo. Sed quis velit eu lacus
+		ullamcorper
+		gravida. Nunc justo
+		libero, ullamcorper eu tempor sed,
+		interdum quis nisi. Vivamus vitae nibh in
+		massa rutrum
+		condimentum. Duis
+		eget augue vitae sapien auctor eleifend ut eget lectus. Quisque
+		consectetur,
+		velit nec facilisis tristique, odio enim blandit mauris,
+		in euismod enim
+		magna vitae nunc.
+	</para>
+	<para>Example for an ordered lists:</para>
+	<orderedlist>
+		<listitem>
+			<para>List item number 1.</para>
+		</listitem>
+		<listitem>
+			<para>One more list item.</para>
+		</listitem>
+	</orderedlist>
+	
+</section>

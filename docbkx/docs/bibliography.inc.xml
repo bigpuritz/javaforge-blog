@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<bibliography xmlns='http://docbook.org/ns/docbook'>
+	<title>References</title>
+
+	<biblioentry xml:id="xml-rec1">
+		<abbrev>AhoSethiUllman96</abbrev>
+		<authorgroup>
+			<author>
+				<firstname>Alfred V.</firstname>
+				<surname>Aho</surname>
+			</author>
+			<author>
+				<firstname>Ravi</firstname>
+				<surname>Sethi</surname>
+			</author>
+			<author>
+				<firstname>Jeffrey D.</firstname>
+				<surname>Ullman</surname>
+			</author>
+		</authorgroup>
+		<copyright>
+			<year>1996</year>
+			<holder>Bell Telephone Laboratories, Inc.</holder>
+		</copyright>
+		<editor>
+			<firstname>James T.</firstname>
+			<surname>DeWolf</surname>
+		</editor>
+		<isbn>0-201-10088-6</isbn>
+		<publisher>
+			<publishername>Addison-Wesley Publishing Company</publishername>
+		</publisher>
+		<title>Compilers, Principles, Techniques, and Tools</title>
+	</biblioentry>
+ 
+	<bibliomixed xml:id="xml-rec2">
+		<abbrev>XML 1.0</abbrev>
+		Tim Bray,
+		Jean Paoli, C. M. Sperberg-McQueen, and Eve Maler, editors.
+		<citetitle>
+			<ulink url="http://www.w3.org/TR/REC-xml">Extensible Markup
+				Language (XML) 1.0 Second Edition</ulink>
+		</citetitle>
+		.
+		World Wide Web Consortium, 2000.
+	</bibliomixed>
+
+	<bibliomixed xml:id="rfc2119">
+		<abbrev>Namespaces</abbrev>
+		Tim Bray,
+		Dave Hollander,
+		and Andrew Layman, editors.
+		<citetitle>
+			<ulink url="http://www.w3.org/TR/REC-xml-names/">Namespaces in
+				XML</ulink>
+		</citetitle>
+		.
+		World Wide Web Consortium, 1999.
+	</bibliomixed>
+
+</bibliography> 

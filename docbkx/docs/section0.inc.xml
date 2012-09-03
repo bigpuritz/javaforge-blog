@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE section[
+<!ENTITY standard "Committee Draft"> 
+]>
+<section version="5.0" xmlns="http://docbook.org/ns/docbook"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:ns5="http://www.w3.org/2000/svg" xmlns:ns4="http://www.w3.org/1998/Math/MathML"
+	xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:db="http://docbook.org/ns/docbook"
+	xml:id="s.intro">
+
+	<title>Introduction</title>
+	<para>
+		This is an example for a simple introduction main chapter. This is an
+		example for a link to
+		Sourceforge:
+		<link xlink:href="http://sourceforge.net/">SourceForge</link>
+		.
+	</para>
+	
+	<section xml:id="s.terminology">
+		<title>Terminology</title>
+		<para>
+			The key words
+			<glossterm>must</glossterm>
+			,
+			<glossterm>must not</glossterm>
+			,
+			<glossterm>required</glossterm>
+			,
+			<glossterm>shall</glossterm>
+			,
+			<glossterm>shall
+				not
+			</glossterm>
+			,
+			<glossterm>should</glossterm>
+			,
+			<glossterm>should
+				not
+			</glossterm>
+			,
+			<glossterm>recommended</glossterm>
+			,
+			<glossterm>may</glossterm>
+			, and
+			<glossterm>optional</glossterm>
+			in this &standard;
+			are to be interpreted as
+			described in
+			<xref linkend="rfc2119" />
+			. Note that for reasons of style, these words
+			are not capitalized in this document.
+		</para>
+	</section>
+	
+	<section xml:id="normative.refs">
+		<title>Normative References</title>
+		<bibliolist>
+			<bibliomixed id="DKnuth86">
+				Donald E. Knuth.
+				<citetitle>Computers and
+					Typesetting: Volume B, TeX: The Program
+				</citetitle>
+				. Addison-Wesley,
+				1986. ISBN 0-201-13437-3.
+			</bibliomixed>
+			<bibliomixed xml:id="xml-rec">
+				<abbrev>XML 1.0</abbrev>
+				Tim Bray,
+				Jean Paoli, C. M. Sperberg-McQueen, and Eve Maler, editors.
+				<citetitle>
+					<ulink url="http://www.w3.org/TR/REC-xml">Extensible Markup
+						Language (XML) 1.0 Second Edition
+					</ulink>
+				</citetitle>
+				.
+				World Wide Web Consortium, 2000.
+			</bibliomixed>
+		</bibliolist>
+	</section>
+	
+</section>
