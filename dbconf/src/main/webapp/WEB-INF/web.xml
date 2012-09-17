@@ -4,37 +4,37 @@
 
 <web-app>
 
-    <display-name>DBConf Sample Application</display-name>
+	<display-name>dbconf sample application</display-name>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:META-INF/applicationContext.xml</param-value>
-    </context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:META-INF/applicationContext.xml</param-value>
+	</context-param>
 
-    <listener>
-        <listener-class>net.javaforge.blog.dbconf.ApplicationStartupListener</listener-class>
-    </listener>
+	<listener>
+		<listener-class>net.javaforge.blog.dbconf.DatabaseAwareApplicationPropertiesInitializer</listener-class>
+	</listener>
 
-    <listener>
-        <listener-class>net.javaforge.blog.dbconf.LogbackInitializer</listener-class>
-    </listener>
+	<listener>
+		<listener-class>net.javaforge.blog.dbconf.LogbackInitializer</listener-class>
+	</listener>
 
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
-    <servlet>
-        <servlet-name>logback.status.servlet</servlet-name>
-        <servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
-    </servlet>
+	<servlet>
+		<servlet-name>logback.status.servlet</servlet-name>
+		<servlet-class>ch.qos.logback.classic.ViewStatusMessagesServlet</servlet-class>
+	</servlet>
 
-    <servlet-mapping>
-        <servlet-name>logback.status.servlet</servlet-name>
-        <url-pattern>/status/logback</url-pattern>
-    </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>logback.status.servlet</servlet-name>
+		<url-pattern>/status/logback</url-pattern>
+	</servlet-mapping>
 
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 
 </web-app>

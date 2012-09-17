@@ -1,21 +1,11 @@
 <?xml version="1.0"?>
-
+ 
 <!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
 
 <Configure class="org.mortbay.jetty.webapp.WebAppContext">
     <New id="kosyfa.services.ds" class="org.mortbay.jetty.plus.naming.Resource">
         <Arg>jdbc/dbconf-app-ds</Arg>
         <Arg>
-
-
-            <!--
-            <New class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-                <Set name="driverClassName">oracle.jdbc.driver.OracleDriver</Set>
-                <Set name="url">jdbc:oracle:thin:@dbintradrasc01.scger.dev.corp:1568:dscdurab</Set>
-                <Set name="username">xanthos_dev</Set>
-                <Set name="password">xanthos_dev</Set>
-            </New>
-            -->
             <New class="org.h2.jdbcx.JdbcDataSource">
                 <Set name="URL">jdbc:h2:dbconf</Set>
                 <Set name="user">sa</Set>
