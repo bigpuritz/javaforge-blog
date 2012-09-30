@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:j2ee="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee    http://java.sun.com/xml/ns/j2ee/web-app_2.5.xsd">
+
+
+	<listener>
+		<listener-class>net.javaforge.blog.atmosphere.BroadcasterCreater</listener-class>
+	</listener>
+
+
+	<servlet>
+		<description>AtmosphereServlet</description>
+		<servlet-name>AtmosphereServlet</servlet-name>
+		<servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
+		<init-param>
+			<param-name>org.atmosphere.cpr.AtmosphereHandler</param-name>
+			<param-value>net.javaforge.blog.atmosphere.UserSessionAwareAtmosphereHandler
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.atmosphere.useNative</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.atmosphere.cpr.sessionSupport</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AtmosphereServlet</servlet-name>
+		<url-pattern>/atmosphere/*</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- <description>AtmosphereServlet</description> <display-name>AtmosphereServlet</display-name> 
+		<servlet> <description>AtmosphereServlet</description> <servlet-name>AtmosphereServlet</servlet-name> 
+		<servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class> we creating 
+		one broadcaster per session! share ExecutorServices to prevent OutOfMemory 
+		<init-param> <param-name>org.atmosphere.cpr.broadcaster.shareableThreadPool 
+		</param-name> <param-value>true</param-value> </init-param> <init-param> 
+		<param-name>com.sun.jersey.config.property.packages</param-name> <param-value>com.foobar.atmosphere.rest</param-value> 
+		</init-param> <init-param> <param-name>org.atmosphere.websocket.messageContentType</param-name> 
+		<param-value>application/json</param-value> </init-param> <load-on-startup>0</load-on-startup> 
+		</servlet> <servlet-mapping> <servlet-name>AtmosphereServlet</servlet-name> 
+		<url-pattern>/rest/*</url-pattern> </servlet-mapping> -->
+</web-app>
