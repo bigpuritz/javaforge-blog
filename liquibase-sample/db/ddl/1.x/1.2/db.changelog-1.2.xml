@@ -1,0 +1,24 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="1.2_1" author="xyz">
+		<createIndex tableName="t_address" indexName="indx_t_address_001">
+			<column name="street" />
+		</createIndex>
+		<createIndex tableName="t_address" indexName="indx_t_address_002"
+			unique="true">
+			<column name="street" />
+			<column name="house_no" />
+			<column name="city" />
+		</createIndex>
+		<createIndex tableName="t_address" indexName="indx_t_address_003">
+			<column name="city" />
+		</createIndex>
+	</changeSet>
+
+	<changeSet id="1.2_2" author="foobar">
+		<tagDatabase tag="1.2" />
+	</changeSet>
+
+</databaseChangeLog>

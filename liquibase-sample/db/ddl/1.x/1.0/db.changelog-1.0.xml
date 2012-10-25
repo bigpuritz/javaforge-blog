@@ -1,0 +1,60 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="1.0_1" author="mk">
+		<createTable tableName="t_user">
+			<column name="id" type="int">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="active" type="boolean" defaultValueBoolean="true" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="1.0_2" author="mk">
+
+		<renameColumn tableName="t_user" oldColumnName="name"
+			newColumnName="username" />
+
+		<createTable tableName="t_role">
+			<column name="name" type="varchar2(50)">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="description" type="varchar2(250)" />
+		</createTable>
+
+		<addColumn tableName="t_user">
+			<column name="role" type="varchar2(50)">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+		<addForeignKeyConstraint constraintName="fk_user_role"
+			baseTableName="t_user" baseColumnNames="role" referencedTableName="t_role"
+			referencedColumnNames="name" />
+
+	</changeSet>
+
+	<changeSet id="1.0_3" author="xyz">
+
+		<createIndex tableName="t_user" indexName="indx_t_user_0003">
+			<column name="username" />
+		</createIndex>
+
+		<createView viewName="v_user">
+			<![CDATA[
+				select u.id,  u.username, r.name 
+				from t_user u
+				join t_role r on u.role = r.name 			
+			]]>
+		</createView>
+
+	</changeSet>
+
+	<changeSet id="1.0_4" author="foobar">
+		<tagDatabase tag="1.0" />
+	</changeSet>
+
+</databaseChangeLog>

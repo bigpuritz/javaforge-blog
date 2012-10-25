@@ -1,0 +1,4 @@
+id,username,role
+1,foo,USER
+2,bar,ADMIN
+3,xyz,USER

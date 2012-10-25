@@ -1,0 +1,31 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="1.1_1" author="mk">
+
+		<createTable tableName="t_address">
+			<column name="id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="street" type="varchar(50)">
+				<constraints nullable="true" />
+			</column>
+			<column name="house_no" type="varchar(10)">
+				<constraints nullable="true" />
+			</column>
+			<column name="zipcode" type="varchar(50)">
+				<constraints nullable="true" />
+			</column>
+			<column name="city" type="varchar(50)">
+				<constraints nullable="true" />
+			</column>
+		</createTable>
+
+	</changeSet>
+
+	<changeSet id="1.1_2" author="foobar">
+		<tagDatabase tag="1.1" />
+	</changeSet>
+
+</databaseChangeLog>

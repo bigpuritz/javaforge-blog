@@ -1,0 +1,23 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+	<changeSet id="testdata" author="bar">
+		<loadData tableName="t_role" file="db/testdata/roles.csv">
+			<column name="name" type="STRING" />
+			<column name="description" type="STRING" />
+		</loadData>
+		<loadData tableName="t_user" file="db/testdata/users.csv">
+			<column name="id" type="NUMERIC" />
+			<column name="username" type="STRING" />
+			<column name="role" type="STRING" />
+		</loadData>
+		<loadData tableName="t_address" file="db/testdata/addresses.csv" />
+		<rollback>
+			<delete tableName="t_address" />
+			<delete tableName="t_user" />
+			<delete tableName="t_role" />
+		</rollback>
+	</changeSet>
+
+</databaseChangeLog>	
