@@ -1,6 +1,5 @@
 This project demonstrates how to create a simple Apache Camel component.
-
-This component generates random character sequences that can be consumed by the subsequent route nodes.
+It generates random character sequences that can be consumed by the subsequent route nodes.
 
 Component's URI format:
 
