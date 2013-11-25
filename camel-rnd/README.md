@@ -30,7 +30,7 @@ from("rnd:foo?generator=alphabetic&length=30").to("stream:out");
 ```
 
 Repeatedly generate random alphanumeric character sequences each 100 characters long,
-aggregate them to the list of 5 elements and send the new message to the log component.
+aggregate them to the lists of 5 elements and send each list as a new message to the subsequent log component.
 
 ```java
 from("rnd:foo?generator=alphanumeric&initialDelay=0&delay=50&length=100")
