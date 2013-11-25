@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t] %c: %m%n" />
+		</layout>
+	</appender>
+	<logger name="net.javaforge.blog" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="stdout" />
+	</logger>
+	<root>
+		<priority value="WARN" />
+		<appender-ref ref="stdout" />
+	</root>
+</log4j:configuration>
