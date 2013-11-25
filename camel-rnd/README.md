@@ -9,11 +9,12 @@ rnd:someName[?options]
 ```
 
 Options:
+
 | Name | Default Value | Description
 --- | --- | ---
 generator | random | possible values: random, alphabetic, alphanumeric, numeric, ascii
 length | 10 | length of the generated character sequence
-chars | <null> | characters to use for generation. available only for generator == random
+chars | | characters to use for generation. available only for generator == random
 letters | false | use letters for generations. available only for generator == random
 numbers | false | use numbers for generations. available only for generator == random
 start | 0 | the position in set of chars to start at. available only for generator == random
