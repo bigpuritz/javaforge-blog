@@ -65,7 +65,7 @@ Repeatedly generate random alphanumeric character sequences each 50 characters l
 append them to the existing file out.txt
 
 ```java
-from("rnd:foo?generator=alphanumeric&delay=10&length=50)
+from("rnd:foo?generator=alphanumeric&delay=10&length=50")
     .process(new Processor() {
             @Override
             public void process(Exchange exchange) throws Exception {
